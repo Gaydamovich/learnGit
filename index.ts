@@ -1,3 +1,14 @@
-const sum = (...rest) => rest.reduce((acc, elem) => acc + elem, 0);
+const form = document.querySelector('form');
 
-console.log(sum(124, 3, 99, 88));
+const validatePassword = () => {
+  const field: any = document.querySelector('#pass');
+  if (field.value.length < 10) {
+      alert('stop!!!!!');
+  }
+};
+
+const eventSubmit = (event) => {
+    validatePassword();
+};
+
+form.addEventListener('submit', eventSubmit);

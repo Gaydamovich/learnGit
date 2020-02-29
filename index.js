@@ -1,8 +1,11 @@
-var sum = function () {
-    var rest = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        rest[_i] = arguments[_i];
+var form = document.querySelector('form');
+var validatePassword = function () {
+    var field = document.querySelector('#pass');
+    if (field.value.length < 10) {
+        alert('stop!!!!!');
     }
-    return rest.reduce(function (acc, elem) { return acc + elem; }, 0);
 };
-console.log(sum(124, 3, 99, 88));
+var eventSubmit = function (event) {
+    validatePassword();
+};
+form.addEventListener('submit', eventSubmit);
