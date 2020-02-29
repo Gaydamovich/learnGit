@@ -1,29 +1,3 @@
-enum Index {
-    iphone = 1,
-    samsung = 3,
-}
+const sum = (...rest) => rest.reduce((acc, elem) => acc + elem, 0);
 
-const obj = {
-    s: {
-        f: {
-            a: 3,
-            g: {
-                g: 'hello'
-            }
-        }
-    }
-};
-
-const copy = {
-    ...obj,
-    s: {
-        ...obj.s,
-        f: {
-            ...obj.s.f,
-            a: null
-        }
-    }
-};
-
-console.log(copy);
-console.log(copy === obj);
+console.log(sum(124, 3, 99, 88));
