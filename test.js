@@ -62,5 +62,3 @@ class Single {
     return Single.inst;
   }
 }
-// console.log(new Single('8080'));
-// console.log(new Single('3033'));
